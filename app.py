@@ -19,6 +19,12 @@ st.set_page_config(page_title="Support Card", page_icon="⚡", layout="centered"
 # Page title
 st.markdown('<h1 style="text-align:center;">Zuper Assistant</h1>', unsafe_allow_html=True)
 
+# Page subtitle 
+st.markdown(
+    '<h4 style="text-align:center; font-weight:400; color:#E0E0E0;">Automatically prioritize electrician requests and generate draft responses in seconds. </h4>',
+    unsafe_allow_html=True
+)
+
 
 # Text input box
 user_input = st.text_area(
@@ -40,6 +46,10 @@ process_clicked = st.button("Process")
 if process_clicked and user_input.strip():
     draft_text = user_input  # Use the input as the draft text
     # Card component
+    st.markdown(
+    '<h4 style="text-align:center; font-weight:800; color:#E0E0E0; margin-top:80px;">Context-rich ticket. </h4>',
+    unsafe_allow_html=True)
+
     st.markdown(
         f"""
         <div class="card">
